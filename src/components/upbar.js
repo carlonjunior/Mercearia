@@ -20,7 +20,8 @@ export default class Upbar extends Component{
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#6495ED'
+        backgroundColor: '#6495ED',
+        heigth: 55
     },
     borda: {
         borderWidth: 5,

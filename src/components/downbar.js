@@ -15,7 +15,8 @@ export default class Downbar extends Component{
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#696969'
+        backgroundColor: '#696969',
+        heigth: 50
     },
     texto: {
         textAlign: 'center',

@@ -22,11 +22,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, flexDirection: 'column' }}>
-        <Upbar style={styles.barra}/>
+      <View style={styles.container}>
+        <Upbar style={styles.barra} />
         <Title textTitle='Lista de Produtos' />
-        <View style={styles.lista}>
-          <FlatList showsVerticalSrollIndicator={false}
+        <View>
+          <FlatList style={styles.lista}
+            showsVerticalSrollIndicator={false}
             data={this.state.feed}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) =>
@@ -42,7 +43,7 @@ export default class App extends Component {
               />}
           />
         </View>
-        <Downbar style={styles.barra} textDown='Products Bela Vista - 2021' />
+        <Downbar textDown='Products Bela Vista - 2021' />
       </View>
 
     )
@@ -51,8 +52,9 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  barra: {
-    height: 50,
+  container: {
+    flex: 1,
+    flexDirection: 'column'
   },
   lista: {
     flex: 1
